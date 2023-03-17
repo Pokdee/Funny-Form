@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="pic_con">
+      <div class="logo_text">
+        <img src="./image/odin-lined.png" alt="" class="logo" />
+        <h1 class="text">ODIN</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="speech">
+        <h3>
+          This is not a real online service!You know you need something like
+          this in your life to help you realize your deepest dreams.<br />
+          Sign up now to get started
+        </h3>
+        <h3>You know you want to</h3>
+      </div>
+
+      <form action="submit" class="form">
+        <h3 class="form_text">Let's do this</h3>
+
+        <label for="first_name"
+          >First name
+          <input type="text" id="first_name" name="first_name" required
+        /></label>
+
+        <label for="last_name"
+          >Last name
+          <input type="text" id="last_name" name="last_name" required
+        /></label>
+
+        <label for="mail"
+          >Email Address <input type="email" id="mail" name="email"
+        /></label>
+
+        <label for="number"
+          >Phone Number <input type="number" id="number" name="number"
+        /></label>
+
+        <label for="pass"
+          >Password
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            required
+            minlength="8"
+        /></label>
+
+        <label for="passCon"
+          >Conform password
+          <input
+            type="password"
+            id="passCon"
+            name="password"
+            required
+            minlength="8"
+        /></label>
+      </form>
+      <div class="text_btn">
+        <button type="submit" class="btn-submit">Create Account</button>
+
+        <h4 class="form_ask">
+          Already have an account?<a class="login">Log in</a>
+        </h4>
+      </div>
+    </div>
+  </body>
+</html>
