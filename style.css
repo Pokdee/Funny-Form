@@ -155,6 +155,7 @@ label > input:focus {
   outline: none;
   border-radius: 1rem;
   color: inherit;
+  transition: margin 1s;
 }
 .btn-submit:hover {
   cursor: pointer;
