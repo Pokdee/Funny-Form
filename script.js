@@ -9,9 +9,7 @@ const checker = function (e) {
   pass_len = e.target.value.length;
 };
 
-passIn.addEventListener("input", (e) => checker(e));
-
-btn.addEventListener("mouseover", function () {
+const btnMover = function () {
   // console.log(this);
   if (!this) return;
 
@@ -26,18 +24,24 @@ btn.addEventListener("mouseover", function () {
   const value = parentWidth - elementWidth - 100 + "px";
 
   //funcs
+  const marginMaker = function (marginright, marginleft) {
+    btn.style.marginRight = marginright;
+    btn.style.marginLeft = marginleft;
+  };
 
   if (pass_len < 8) {
     if (!right || !left) {
       this.style.marginLeft = value;
     }
     if (right > left) {
-      btn.style.marginRight = "0px";
-      btn.style.marginLeft = value;
+      marginMaker("0px", value);
     }
     if (left > right) {
-      btn.style.marginLeft = "0px";
-      btn.style.marginRight = value;
+      marginMaker(value, "0px");
     }
   }
-});
+};
+
+passIn.addEventListener("input", (e) => checker(e));
+
+btn.addEventListener("mouseover", btnMover);
